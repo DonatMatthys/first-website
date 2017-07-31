@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>awsome Testsite</title>
+   <link href = 'style.css'  rel = 'stylesheet'>
+
+</head>
+<body>
+  <div>
+  <h1 id = "title"> hallo Welt</h1>
+  <h4> Todos 
+      <span id = "todocounter">  (0) </span> 
+</h4>
+  <ul id = "todo-list"> 
+  </ul>             
+
+<hr>    
+<input type = "text" id = "text">
+<button onclick = "addtodo()"> add </button>
+  </div>
+
+
+<script>
+
+var name = "Matthys"; 
+var prename = "Donat";
+var alter = 18;
+var title = document.querySelector('#title');
+title.innerText = prename + " " + name;
+
+var count = 0;
+var todocounter = document.querySelector('#todocounter')
+
+var list = document.querySelector ('#todo-list')
+
+
+
+
+function addtodo(){
+    var newtodovalue = document.querySelector ('#text').value
+    appendtodo(newtodovalue)
+}
+
+
+function appendtodo(todo){
+  if (todo != ""){ 
+  var li = document.createElement ('li')
+  li.innerHTML = (todo) 
+  list.appendChild(li)}
+  setCounter(list.childElementCount)
+}
+
+
+function setCounter(countNumber)
+{
+todocounter.innerText = `(${countNumber})`;   
+
+}
+
+
+
+
+</script>  
+</body>
+</html>
